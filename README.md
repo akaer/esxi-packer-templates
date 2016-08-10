@@ -17,8 +17,8 @@ To kick off a full build:
 
 ```shell
 packer build \
-       -var 'iso_file=iso/VMware-VMvisor-Installer-6.0.0-2494585.x86_64.iso' \
-       -var 'iso_sha1sum=a38a9d37ea529329338de049679c1dd1687d3860' \
+       -var 'iso_file=iso/VMware-VMvisor-Installer-6.0.0.update02-3620759.x86_64.iso' \
+       -var 'iso_sha1sum=5a93f457980d18f7061c8b550c509682070cadc7' \
        packer-esxi.json
 ```
 
@@ -29,7 +29,7 @@ Default `root` password for the resulting Vagrant box is `vagrant`.
 There is a convenience script provided to build a known version of the vagrant box.
 
 ```shell
-./build-6.0.0.update01.sh
+./build-6.0.0.update02.sh
 ```
 
 ## Legal
