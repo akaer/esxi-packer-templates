@@ -3,3 +3,4 @@
 packer_cache
 iso
 output-vmware-esxi
+.DS_Store
