@@ -51,7 +51,12 @@
     },
     {
       "type": "shell",
-      "script": "scripts/esxi-esxui_install.sh"
+      "script": "scripts/esxi-upgrade.sh"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/esxi-esxui_install.sh",
+      "pause_before": "300s"
     },
     {
       "type": "file",
