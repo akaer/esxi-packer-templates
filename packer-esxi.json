@@ -44,15 +44,11 @@
     },
     {
       "type": "shell",
-      "script": "scripts/esxi-settings.sh"
-    },
-    {
-      "type": "shell",
-      "script": "scripts/esxi-vmware-tools_install.sh"
-    },
-    {
-      "type": "shell",
-      "script": "scripts/esxi-upgrade.sh"
+      "scripts": [
+          "scripts/esxi-settings.sh",
+          "scripts/esxi-vmware-tools_install.sh",
+          "scripts/esxi-upgrade.sh"
+      ]
     },
     {
       "type": "shell",
