@@ -46,14 +46,33 @@
       "type": "shell",
       "scripts": [
           "scripts/esxi-settings.sh",
-          "scripts/esxi-vmware-tools_install.sh",
-          "scripts/esxi-upgrade.sh"
+          "scripts/esxi-vmware-tools_install.sh"
       ]
+    },
+    {
+        "type": "file",
+        "source": "./files/",
+        "destination": "/vmfs/volumes/datastore1/",
+        "pause_before": "120s"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/esxi-upgrade_ESXi600-201605001_Build_3825889.sh"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/esxi-upgrade_ESXi600-201608001_Build_4192238.sh",
+      "pause_before": "120s"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/esxi-upgrade_ESXi600-201610001_Build_4510822.sh",
+      "pause_before": "120s"
     },
     {
       "type": "shell",
       "script": "scripts/esxi-esxui_install.sh",
-      "pause_before": "300s"
+      "pause_before": "120s"
     },
     {
       "type": "file",
