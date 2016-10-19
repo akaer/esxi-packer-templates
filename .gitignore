@@ -1,8 +1,8 @@
 *.tar.gz
 *.box
 packer_cache
-iso
+*.iso
 output-vmware-esxi
 .DS_Store
-.zip
-.vib
+*.zip
+*.vib
