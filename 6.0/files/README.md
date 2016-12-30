@@ -1,5 +1,7 @@
 Go to https://my.vmware.com/group/vmware/patch and Download
 
+  * ESXi600-201611001 (Profile name: ESXi-6.0.0-20161104001-standard)
+    SHA1: ec2d52e44b80d2a6d3c4f5fca2e5a4337e92bc4e
   * ESXi600-201610001 (Profile name: ESXi-6.0.0-20161004001-standard)
     SHA1: edb061c7af236b569920f21b47dc7e65297431e6
   * ESXi600-201608001 (Profile name: ESXi-6.0.0-20160804001-standard)
