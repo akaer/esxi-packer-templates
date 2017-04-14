@@ -17,12 +17,12 @@ To kick off a full build:
 
 ```shell
 packer build \
-       -var 'iso_file=/Volumes/isos/VMWare/ESXi/VMware-VMvisor-Installer-6.0.0.update02-3620759.x86_64.iso' \
-       -var 'iso_sha1sum=5a93f457980d18f7061c8b550c509682070cadc7' \
+       -var 'iso_file=/Volumes/isos/VMWare/ESXi/VMware-VMvisor-Installer-6.0.0.update03-5050593.x86_64.iso' \
+       -var 'iso_sha1sum=37c5b91914d605cd1cd36dd12aa927baed15e652' \
        packer-esxi.json
 ```
 
-The Packer template and the scripts have been tested with ESXi version 5.5 and 6.0.
+The Packer template and the scripts have been tested with ESXi version 6.0.
 
 Default `root` password for the resulting Vagrant box is `vagrant`.
 
@@ -36,8 +36,8 @@ To kick off a full debug build:
 
 ```shell
 PACKER_LOG=1 PACKER_LOG_PATH=build.log packer build \
-       -var 'iso_file=/Volumes/isos/VMWare/ESXi/VMware-VMvisor-Installer-6.0.0.update02-3620759.x86_64.iso' \
-       -var 'iso_sha1sum=5a93f457980d18f7061c8b550c509682070cadc7' \
+       -var 'iso_file=/Volumes/isos/VMWare/ESXi/VMware-VMvisor-Installer-6.0.0.update03-5050593.x86_64.iso' \
+       -var 'iso_sha1sum=37c5b91914d605cd1cd36dd12aa927baed15e652' \
        packer-esxi.json
 ```
 
