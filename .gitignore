@@ -6,3 +6,4 @@ output-vmware-esxi
 .DS_Store
 *.zip
 *.vib
+*.log
