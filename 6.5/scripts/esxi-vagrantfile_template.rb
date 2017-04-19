@@ -13,6 +13,7 @@ Vagrant.configure('2') do |config|
       v.vmx['numvcpus'] = '2'
       v.vmx['ethernet0.virtualDev'] = 'vmxnet3'
       v.vmx['vhv.enable'] = 'true'
+      v.gui = true
     end
   end
 
@@ -20,5 +21,6 @@ Vagrant.configure('2') do |config|
     vcenter.num_cpu = 2
     vcenter.memory = 8192
     vcenter.enable_vm_customization = false
+    vcenter.gui = true
   end
 end

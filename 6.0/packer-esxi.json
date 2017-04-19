@@ -6,7 +6,7 @@
   },
   "builders": [
     {
-      "name": "vmware-esxi",
+      "name": "vmware-esxi-6.0",
       "vm_name": "vmware-esxi",
       "vmdk_name": "vmware-esxi-disk0",
       "type": "vmware-iso",
