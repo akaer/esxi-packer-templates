@@ -2,6 +2,11 @@ Go to https://my.vmware.com/group/vmware/patch and Download
 
 Patches for ESXi 6.5 a (VMware-VMvisor-Installer-201701001-4887370.x86_64.iso)
 
+  * ESXi650-201704001 (Profile name: ESXi-6.5.0-20170404001-standard)
+    Release Date: 04/18/2017
+    Build Number: 5310538
+    SHA1: c89e507aaf2f35e16fb6ec0c1003cda115a3a43b
+
   * ESXi650-201703002 (Profile name: ESXi-6.5.0-20170304101-standard)
     Release Date: 03/28/2017
     Build Number: 5224529

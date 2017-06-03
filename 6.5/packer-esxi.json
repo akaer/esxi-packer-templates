@@ -57,6 +57,11 @@
       "script": "scripts/esxi-upgrade_ESXi650-201703002_Build_5224529.sh",
       "pause_before": "120s"
     },
+   {
+      "type": "shell",
+      "script": "scripts/esxi-upgrade_ESXi650-201704001_Build_5310538.sh",
+      "pause_before": "120s"
+    },
     {
       "type": "shell",
       "scripts": [
