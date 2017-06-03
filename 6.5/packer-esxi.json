@@ -76,7 +76,10 @@
     },
     {
       "type": "shell",
-      "script": "scripts/esxi-cloning_configuration.sh"
+      "scripts": [
+        "scripts/esxi-cloning_configuration.sh",
+        "scripts/configure-net.sh"
+      ]
     }
   ],
   "post-processors": [
