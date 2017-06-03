@@ -45,8 +45,7 @@
     {
         "type": "file",
         "source": "./files/",
-        "destination": "/vmfs/volumes/datastore1/",
-        "pause_before": "120s"
+        "destination": "/vmfs/volumes/datastore1/"
     },
     {
       "type": "shell",

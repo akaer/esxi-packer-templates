@@ -7,7 +7,7 @@ Vagrant.configure('2') do |config|
   config.vm.synced_folder '.', '/vagrant', disabled: true
   config.nfs.functional = false
 
-  %w('vmware_fusion', 'vmware_workstation', 'vmware_appcatalyst').each do |p|
+  %w(vmware_fusion vmware_workstation vmware_desktop vmware_appcatalyst).each do |p|
     config.vm.provider p do |v|
       v.vmx['memsize'] = '8192'
       v.vmx['numvcpus'] = '2'
