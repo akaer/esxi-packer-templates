@@ -78,7 +78,8 @@
       "type": "shell",
       "scripts": [
         "scripts/esxi-cloning_configuration.sh",
-        "scripts/configure-net.sh"
+        "scripts/configure-net.sh",
+        "scripts/allow_vnc_firewall.sh"
       ]
     }
   ],
