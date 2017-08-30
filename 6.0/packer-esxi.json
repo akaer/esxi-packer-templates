@@ -61,6 +61,10 @@
     },
     {
       "type": "shell",
+      "script": "scripts/esxi-upgrade_ESXi600-201706001_Build_5572656.sh"
+    },
+    {
+      "type": "shell",
       "script": "scripts/esxi-esxui_install.sh",
       "pause_before": "120s"
     },
