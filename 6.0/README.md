@@ -1,5 +1,11 @@
-# VMware [ESXi](https://www.vmware.com/products/esxi-and-esx/overview) [Packer](http://packer.io) templates
+# Packer template for building VMWare ESXi 6.0 with latest fixes
 
+Latest version:
+
+  * ESXi600-201706001 (Profile name: ESXi-6.0.0-20170304001-standard)
+    Release Date: 06/06/2017
+    Build Number: 5224934
+    SHA1: d4178dfddef01e9585c6c11ae20a1e1869c20457
 
 ## Prerequisites
 
