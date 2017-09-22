@@ -49,25 +49,6 @@
     },
     {
       "type": "shell",
-      "script": "scripts/esxi-upgrade_ESXi650-201703001_Build_5146846.sh"
-    },
-    {
-      "type": "shell",
-      "script": "scripts/esxi-upgrade_ESXi650-201703002_Build_5224529.sh",
-      "pause_before": "120s"
-    },
-    {
-      "type": "shell",
-      "script": "scripts/esxi-upgrade_ESXi650-201704001_Build_5310538.sh",
-      "pause_before": "120s"
-    },
-    {
-      "type": "shell",
-      "script": "scripts/esxi-upgrade_ESXi650-20170702001_Build_5969303.sh",
-      "pause_before": "120s"
-    },
-    {
-      "type": "shell",
       "scripts": [
           "scripts/esxi-settings.sh",
           "scripts/esxi-dvfilter_install.sh"
