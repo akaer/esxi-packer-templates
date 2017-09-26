@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 FIREWALL_CONFIG=packervnc.xml
 
 cat > /tmp/${FIREWALL_CONFIG} << __CUSTOM_ESXI_FIREWALL_RULE__

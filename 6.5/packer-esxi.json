@@ -6,7 +6,7 @@
   },
   "builders": [
     {
-      "name": "vmware-esxi-6.5",
+      "name": "esxi-6.5",
       "vm_name": "vmware-esxi",
       "vmdk_name": "vmware-esxi-disk0",
       "type": "vmware-iso",
@@ -63,9 +63,9 @@
     {
       "type": "shell",
       "scripts": [
-        "scripts/esxi-cloning_configuration.sh",
         "scripts/configure-net.sh",
-        "scripts/allow_vnc_firewall.sh"
+        "scripts/allow_vnc_firewall.sh",
+        "scripts/esxi-cloning_configuration.sh"
       ]
     }
   ],
