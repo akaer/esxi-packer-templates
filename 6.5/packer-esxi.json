@@ -10,7 +10,7 @@
       "vm_name": "vmware-esxi",
       "vmdk_name": "vmware-esxi-disk0",
       "type": "vmware-iso",
-      "headless": "false",
+      "headless": "true",
       "disk_size": 163840,
       "disk_type_id": 0,
       "guest_os_type": "vmkernel6",
