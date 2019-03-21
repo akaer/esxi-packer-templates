@@ -1,0 +1,76 @@
+{
+  "variables": {
+    "iso_file": "",
+    "iso_sha1sum": "",
+    "root_password": "P@ssw0rd"
+  },
+  "builders": [
+    {
+      "name": "esxi-6.7",
+      "vm_name": "vmware-esxi",
+      "vmdk_name": "vmware-esxi-disk0",
+      "type": "vmware-iso",
+      "headless": "true",
+      "boot_wait": "5s",
+      "http_directory": "scripts",
+      "boot_command": [
+        "<enter><wait>O<wait> ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/esxi-kickstart.cfg<enter>"
+      ],
+      "cores": 2,
+      "cpus": 2,
+      "disk_size": 163840,
+      "disk_type_id": 0,
+      "guest_os_type": "vmkernel6",
+      "iso_checksum": "{{user `iso_sha1sum`}}",
+      "iso_checksum_type": "sha1",
+      "iso_url": "{{user `iso_file`}}",
+      "memory": 8192,
+      "network_adapter_type": "vmxnet3",
+      "shutdown_command": "esxcli system maintenanceMode set -e true -t 0 ; esxcli system shutdown poweroff -d 10 -r 'Packer Shutdown' ; esxcli system maintenanceMode set -e false -t 0",
+      "ssh_password": "{{user `root_password`}}",
+      "ssh_port": 22,
+      "ssh_username": "root",
+      "ssh_wait_timeout": "60m",
+      "version": 13,
+      "vmx_data": {
+        "vhv.enable": "true"
+      }
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "scripts/vagrant.pub",
+      "destination": "/etc/ssh/keys-root/authorized_keys"
+    },
+    {
+      "type": "shell",
+      "scripts": [
+          "scripts/esxi-settings.sh"
+      ]
+    },
+    {
+      "type": "file",
+      "source": "scripts/esxi-vnic-fix.sh",
+      "destination": "/etc/rc.local.d/local.sh"
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "scripts/configure-net.sh",
+        "scripts/allow_vnc_firewall.sh",
+        "scripts/esxi-cloning_configuration.sh",
+        "scripts/esxi-install-updates.sh"
+      ]
+    }
+  ],
+  "post-processors": [
+    [
+      {
+        "type": "vagrant",
+        "compression_level": 9,
+        "vagrantfile_template": "scripts/esxi-vagrantfile_template.rb"
+      }
+    ]
+  ]
+}
